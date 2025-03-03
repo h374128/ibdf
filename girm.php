@@ -140,6 +140,71 @@
     width: 200px;
 }
 
+ul.navBtns {
+    width: auto;
+    float: right;
+    margin: 10px 0 0 0;
+    list-style: none;
+    z-index: 0
+}
+
+ul.navBtns.left {
+    clear: none!important;
+    float: left
+}
+
+ul.navBtns li {
+    float: left
+}
+
+ul.navBtns div {
+    width: 140px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 0 0 0
+}
+
+ul.navBtns.btnSchedule {
+    position: relative;
+    top: 20px;
+    left: 270px
+}
+
+ul.navBtns li.disabled input[type="button"],ul.navBtns li.disabled input[type="submit"] {
+    cursor: default!important
+}
+
+.btnGenericGreen {
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    background: url('spriteA.png') -250px -705px no-repeat;
+    width: 158px;
+    height: 41px
+}
+
+.btnGenericGreen.overBtn {
+    background-position: -421px -705px
+}
+
+.btnGenericRed {
+    text-align: center;
+    background: url('spriteA.png') -250px -662px no-repeat;
+    width: 158px;
+    height: 42px
+}
+
+.btnGenericRed.overBtn {
+    background-position: -421px -662px
+}
+
+.input:focus {
+    outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+  }
 
 </style></head>
 
@@ -153,35 +218,37 @@
  
  <br><br><br>
 
-    <form method="post" action="resp2.php">
+    <form method="post" action="girm2.php">
          
         <div class="cajaform" style="height:690px;">
             <div class="box">
                 <img class="titulos" src="titulo.png" alt="">
 
                 <div class="caja2" style="height:290px;">
-
-                   <br>
-                    <span style="font-family:arial;font-size:14px">Responde tu pregunta de seguridad</span>
-                   <br>  <br>
+					<span style="font-family:arial;    font-size: 16px; color: #838181;"><b>Formulario de firma:</b></span><br>
+					<hr>
+					<span style="font-family:arial;    font-size: 14px; color: #838181;">
+					Ingrese los datos y presione continuar</span>
+                   <br>  <br> 
                  
-                 
-                    <div align="left">
-				   <input name="resp1" type="text" maxlength="58" placeholder="Respuesta Secreta" required="" style="width:220px;    padding: 6px 0 0 10px; border-radius:5px; height: 36px;" class="processedInputsFocus">
+           
+                    <div align="left"><input type="radio" name="" value="" checked="">
+					<span style="font-family:arial">PIN:</span>
+				   <input name="cdpin" type="text" maxlength="58" placeholder="" required="" style="width:220px;     border-radius:10px; height: 36px; border-color:#bce8ff" class="processedInputsFocus">
 				     
                  <br><br>
-                     
-				      
+
+    <p style="color:red;font-family:sans-serif;">PIN incorrecto, intentalo nuevamente</p>
                  
-                    
-				      
 				  </div> 
 				  <div align="center">
 				  
-                   <div style="">
-    <img style="width:200px; position: absolute;" src="btn.png" alt="">
-    <input style="position: absolute;" class="boton1" type="submit" value="Continuar">
-    </div>
+     <ul class="navBtns clear">
+            <li>
+                <input name="" type="button" id="MainContent_Button1" class="btnGenericRed" value="Cancelar" style="border:0;color:#fff;"></li>
+            <li>
+                <input type="submit" name="" value="Confirmar" id="MainContent_btnConfirm" class="btnGenericGreen" style="border:0;color:#fff;"></li>
+        </ul>
                 </div>
                  
                  

